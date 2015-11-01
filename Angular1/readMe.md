@@ -94,6 +94,67 @@ The ngBind attribute tells Angular to replace the text context of specific HTML 
 ```
 ^ With this method there is a chance due to performance that the user will see your binding variable before it gets updated. I currently use this method the most, but may chance as I continue to refactor my own work.
 
+# What is a filter?
+
+How do filters apply to a directive like ng-repeat?
+https://scotch.io/tutorials/all-about-the-built-in-angularjs-filters
+
+Filters allow you to manipulate and filter the presentation of your views, the data in your views.
+Types of data that filters work great for:
+  - Alphanumeric (letters, numbers)
+  - Dates
+  - Currencies
+  - JSON objects
+
+Here are some examples:
+
+**Date filter**
+
+```
+<p>{{ 1400956671914 | date: 'dd-MM-yyyy' }}</p>
+```
+
+When rendered, the DOM will look like this:
+```
+<p>24-05-2014</p>
+```
+
+Example of a custom Capitalize filter:
+
+```
+var app = angular.module('app', []);
+
+app.controller('Ctrl', function ($scope) {
+   $scope.msg = 'hello, world.';
+});
+
+app.filter('capitalize', function() {
+    return function(input) {
+      return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
+    }
+});
+```
+
+In the Markup:
+```
+<div ng-app="app">
+    <div ng-controller="Ctrl">
+        <p><b>My Text:</b> {{msg | capitalize}}</p>
+        <!-- My Text: Hello, world. -->
+    </div>
+</div>
+```
+
+Used to limit characters:
+```
+LimitTo Filter Applied to a String:
+{{ copy | limitTo:150 }}
+
+LimitTo Filter Applied to an Array:
+<ul>
+  <li ng-repeat="person in list | limitTo:4"> {{person}} </li>
+</ul>
+```
 
 
 
