@@ -57,7 +57,42 @@ What are some examples of Angular attribute directives?
   - ng-app
   - ng-class
 
-You can write your own custom attribute directives to solve very specific problems, in my experience I've only had to [write 1 so far](https://gist.github.com/leongaban/9512645ab01e74bb0663).
+You can write your own custom attribute directives to solve very specific problems, in my experience [I've only had to write 1 so far](https://gist.github.com/leongaban/9512645ab01e74bb0663).
+
+# What is binding in Angular?
+[Have everyone turn to their neighbor, take 15 seconds to explain binding to them. Then have some share their description]
+
+The **ngModel** directive binds an input, select, textarea (or custom form control) to a property on the scope using NgModelController, which is created and exposed by this directive.
+
+Basically it connects your forms to your controllers:
+
+  - Binds the view into the model, used for forms like input, textarea or select
+  - Provides validation behavior
+  - Keeping the state of control (valid/invalid, dirty/pristine, touched/untouched, validation errors).
+  - Sets related css classes on the element
+
+```
+<div ng-controller="ExampleController">
+  <form novalidate class="simple-form">
+    Name:   <input type="text"  ng-model="user.name" /><br />
+    E-mail: <input type="email" ng-model="user.email" /><br />
+    <input type="submit" ng-click="update(user)" value="Save" />
+  </form>
+</div>
+```
+
+When the data above is submitted ng-model captures the data and sends it into the Controller scope.
+
+**ngBind**
+The ngBind attribute tells Angular to replace the text context of specific HTML elements with the expression value:
+
+<span ng-bind="name"></span>
+^ This method of binding waits for the view and variable to be updated before displaying. ng-bind will only apply once the value actually changes.
+
+<span>{{name}}</span>
+^ With this method there is a chance due to performance that the user will see your binding variable before it gets updated. I currently use this method the most, but may chance as I continue to refactor my own work.
+
+
 
 
 
