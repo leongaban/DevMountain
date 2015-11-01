@@ -85,11 +85,13 @@ When the data above is submitted ng-model captures the data and sends it into th
 
 **ngBind**
 The ngBind attribute tells Angular to replace the text context of specific HTML elements with the expression value:
-
+```
 <span ng-bind="name"></span>
+```
 ^ This method of binding waits for the view and variable to be updated before displaying. ng-bind will only apply once the value actually changes.
-
+```
 <span>{{name}}</span>
+```
 ^ With this method there is a chance due to performance that the user will see your binding variable before it gets updated. I currently use this method the most, but may chance as I continue to refactor my own work.
 
 
