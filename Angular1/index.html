@@ -6,13 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Angular I</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="author" href="humans.txt">
 </head>
 <body ng-app="friendsList">
     
     <section ng-controller="mainCtrl as main">
-        <!-- My name is {{name}} -->
-        My name is <span ng-bind="main.name"></span>
+        <h1>
+            <!-- My name is {{name}} -->
+            My name is <span ng-bind="main.name"></span>
+        </h1>
+
+        <section class="friends">
+            <p>My friends are:</p>
+            <ul>
+                <li ng-repeat="friend in main.myFriends" ng-bind="friend">
+                    <!-- {{friend}} -->
+                </li>
+            </ul>
+        </section>
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
