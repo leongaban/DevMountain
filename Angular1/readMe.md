@@ -18,22 +18,22 @@ First both are Javascript frameworks, frameworks abstract complexity from langua
 
 The jQuery framework is a framework designed to allow us to easily manipulate the DOM, the HTML Markup. We can grab elements, like divs, p tags, H1s, etc and move them around, change their css classes, animate things, etc.
 
-Now as things have evolved, developers aren't so much making websites anymore as we're making apps in a variety of spaces. And this is what the Angular framework specializes in, Angular helps us create Single Page Applications.
+Now as things have evolved, we developers aren't so much making websites anymore as we're making apps in a variety of spaces. And this is what the Angular framework specializes in, Angular helps us create Single Page Applications. There is this concept called seperation of concerns, and Angular handles this beautifully with it's modules. For example the Angular Controller module is what we use to handle and manipulate data, Angular Directives handles the view and lets us interact with the DOM. Angular services allow us a way to further seperate logic out of controllers, services take care of specific tasks in your app, stuff from simple string manipulation or handling REST API calls. All that comes with Angular out of the box. 
 
 # SPAs Single Page Applications.
 
-## What problems do SPAs help us solve?
-  - They provide a smooth, intuitive user experience
+**What problems do SPAs help us solve?**
+  - They provide a smooth, intuitive user experience (compared to webpages)
   - Apps are fully downloaded, and only make requests to the server for relevant data
   - We're in the age of apps not web pages anymore. Forcing page refreshes is the old way of doing things.
 
 # Angular Directives
 
-## What is an Angular directive?
+**What is an Angular directive?**
 
 An Angular directive is an Angular module whose purpose is to interact with the DOM, controllers manipulate $scopes and data, services connect controllers to other controllers and directives and retrieves data from servers. Directives render, represent and attaches specific behavior the views of our apps.
 
-## What types of Angular directives exist?
+**What types of Angular directives exist?**
   - Elements
   - Attributes
   - Classes
@@ -43,10 +43,10 @@ Classes and Comments are very rarely used, in fact I would suggest not worrying 
 
 An example of an element directive is a custom HTML tag such as <tags-panel></tags-panel> or <overlay></overlay>
 
-## Element directives
+**Element directives**
 Will be how you build and arrange the foundation of your app. Using a house analogy again, Element directives is how you know do the walls go, the kitchen, doors etc.
 
-## Attribute directives
+**Attribute directives**
 What are some examples of Angular attribute directives?
 
   - ng-repeat
@@ -156,10 +156,40 @@ LimitTo Filter Applied to an Array:
 </ul>
 ```
 
+# What is a $scope?
+$scope is the "glue" between the view and the controller
 
+How do we use $scope to put data into our view?
+  - ng-bind
+  - scope variables or syntax as variables
 
+```
+$scope.username = "Leon Gaban"
+```
+```
+<h1>username</h1>
+```
 
+If you use Scope, I suggest setting the $scope to the variable vs or ViewScope.
 
+**Controller as syntax** (The in vogue way of handling scope)
+It's more verbose.
 
+[John Papa's Angular style guide](https://github.com/johnpapa/angular-styleguide)
 
+[controllerAs with vm](https://github.com/johnpapa/angular-styleguide#style-y031)
 
+```
+  this.username = "Leon Gaban";
+  // or
+
+  var vm = this;
+      vm.username = "Leon Gaban";
+```
+```
+<div ng-controller="UserCtrl as usr">
+  <h1>usr.username</h1>
+</div>
+```
+
+https://github.com/DevMountain/mini-BabiesFirstAngular
