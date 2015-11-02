@@ -1,5 +1,7 @@
 # DevMountain Angular I
 
+[Google slides](https://docs.google.com/presentation/d/17v_3GC8498EQWVYk2xX9eglSNr1sfZ5JjZ_lTsGkKZ8/edit#slide=id.g725cfe201_2_47)
+
 ## Intro
 --------------------------------------------------------------------------------
 Hi all, I'm Leon Gaban, frontend developer for the Dallas based startup [TickerTags.com](https://tickertags.com)
@@ -18,7 +20,9 @@ First both are Javascript frameworks, frameworks abstract complexity from langua
 
 The jQuery framework is a framework designed to allow us to easily manipulate the DOM, the HTML Markup. We can grab elements, like divs, p tags, H1s, etc and move them around, change their css classes, animate things, etc.
 
-Now as things have evolved, we developers aren't so much making websites anymore as we're making apps in a variety of spaces. And this is what the Angular framework specializes in, Angular helps us create Single Page Applications. There is this concept called seperation of concerns, and Angular handles this beautifully with it's modules. For example the Angular Controller module is what we use to handle and manipulate data, Angular Directives handles the view and lets us interact with the DOM. Angular services allow us a way to further seperate logic out of controllers, services take care of specific tasks in your app, stuff from simple string manipulation or handling REST API calls. All that comes with Angular out of the box. 
+Now as things have evolved, we developers aren't so much making websites anymore as we're making apps in a variety of spaces. And this is what the Angular framework specializes in, Angular helps us create Single Page Applications. There is this concept called seperation of concerns, and Angular handles this beautifully with it's modules. For example the Angular Controller module is what we use to handle and manipulate data, Angular Directives handles the view and lets us interact with the DOM. Angular services allow us a way to further seperate logic out of controllers, services take care of specific tasks in your app, stuff from simple string manipulation or handling REST API calls. All that comes with Angular out of the box.
+
+Learning curve graphic
 
 # SPAs Single Page Applications.
 
@@ -31,7 +35,7 @@ Now as things have evolved, we developers aren't so much making websites anymore
 
 **What is an Angular directive?**
 
-An Angular directive is an Angular module whose purpose is to interact with the DOM, controllers manipulate $scopes and data, services connect controllers to other controllers and directives and retrieves data from servers. Directives render, represent and attaches specific behavior the views of our apps.
+A directive is an Angular module whose purpose is to interact with the DOM, controllers manipulate $scopes and data, services provide specialized utility. Directives render, represent and attaches specific behavior the views of our apps.
 
 **What types of Angular directives exist?**
   - Elements
