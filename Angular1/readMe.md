@@ -4,13 +4,13 @@
 
 ## Intro
 --------------------------------------------------------------------------------
-Hi all, I'm Leon Gaban, frontend developer for the Dallas based startup [TickerTags.com](https://tickertags.com)
+Hi everyone, I'm Leon Gaban, frontend developer for the Dallas based startup [TickerTags.com](https://tickertags.com)
 
-All day I work with design files, write markup and CSS and develope Angular based Single Page Applications. Right now I'm using Angular and the Ionic framework to develop mobile app. So frontend development can expands into more areas than it use too, the skills we're all developing is basically the skills to craft user experiences.
+All day I work with design files, write markup and CSS and develop Angular based Single Page Applications. Right now I'm using Angular and the Ionic framework to develop mobile app. Frontend development now expands into many more areas than it use too, desktop apps, mobile apps, fridge apps and more, the skills we're developing are the skills to craft user experiences.
 
-I'm 100% self-taught, I went to school for art and design not computer science, learned everything I know now online through tuts+, teamtreehouse, codeacademy, etc etc... I wish there was a bootcamp option like this for me back in the day, I would have jumped on it.
+I'm 100% self-taught, I went to school for art and design not computer science, learned everything I know online through tuts+, teamtreehouse, codeacademy, youtube etc... I wish there was a bootcamp option like this for me back in the day, I would have jumped on it.
 
-We're builders, backend developers create the foundation, wire up the electricity and water. Frontend developers put up the walls, paint them, install windows, style doors, handles, put in the bushes and flowers. We make shit look pretty, functional and work smoothly... and full stack developers do it all.
+We're builders, backend developers create the foundation. Frontend developers wire up the electricity and water, put up the walls, paint them, install windows, style doors, handles, put in the bushes and flowers. We make shit look pretty, functional and work smoothly... and full stack developers do it all.
 
 # jQuery & Angular
 
